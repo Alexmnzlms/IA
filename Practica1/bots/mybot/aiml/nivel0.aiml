@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!--P1-->
+<category>
+<pattern> HABLAME UN POCO DE TI </pattern>
+<template>
+  Me presento, me llamo <bot name= "botmaster"/> y soy licenciado en ingenieria
+  informatica por la universidad de granada.
+</template>
+</category>
+
+<category>
+<pattern> DIM+ ^ TI </pattern>
+<template><srai> HABLAME UN POCO DE TI</srai>
+</template>
+</category>
+
+<category>
+<pattern> CUENT+ ^ TI </pattern>
+<template><srai> HABLAME UN POCO DE TI</srai>
+</template>
+</category>
+
+<!--P2-->
+<category>
+<pattern> CUAL ES TU MAYOR DEFECTO </pattern>
+<template>
+  Me considero una persona competitiva, cuando se me presenta un reto
+  a veces me cuesta poder olvidarme de ello hasta que no lo supero
+</template>
+</category>
+
+<category>
+<pattern> ^ DEFECTO+ ^ </pattern>
+<template><srai> CUAL ES TU MAYOR DEFECTO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ DESVENTAJA+ ^ </pattern>
+<template><srai> CUAL ES TU MAYOR DEFECTO </srai>
+</template>
+</category>
+
+
+<!--P3-->
+<category>
+<pattern> QUE ASPECTOS NO TE GUSTAN DE UN JEFE </pattern>
+<template>
+  Me considero una persona que sabe adaptarse a las personas con las
+  que trabaja, y si se trata de mi jefe, me adapto a su forma de trabajar
+  para que podamos coordinarnos de la mejor manera posible
+</template>
+</category>
+
+<category>
+<pattern> ^ NO ^ GUST+ ^ JEFE ^  </pattern>
+<template> <srai> QUE ASPECTOS NO TE GUSTAN DE UN JEFE </srai>
+</template>
+</category>
+
+<!--P4-->
+<category>
+<pattern> CUALES SON TUS 3 MAYORES VIRTUDES </pattern>
+<template>
+  Me gusta mucho aprender nuevas cosas que me ayuden a avanzar como profesional
+  Me siento comodo trabajando con mis compañeros porque eso me permite que mi
+  trabajo sea lo mejor posible
+</template>
+</category>
+
+<category>
+<pattern> ^ CUALIDAD+ ^ </pattern>
+<template> <srai> CUALES SON TUS 3 MAYORES VIRTUDES </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ COSAS BUENAS ^ </pattern>
+<template> <srai> CUALES SON TUS 3 MAYORES VIRTUDES </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ VENTAJAS ^ </pattern>
+<template> <srai> CUALES SON TUS 3 MAYORES VIRTUDES </srai>
+</template>
+</category>
+
+<!--P5-->
+<category>
+<pattern> TE CONSIDERAS PREPARADO PARA DESEMPEÑAR LAS FUNCIONES DE ESTE PUESTO </pattern>
+<template>
+  Creo que tengo la experiencia para poder desempeñar este trabajo y tambien
+  las ganas de aprender cosas nuevas si algun trabajo me cuesta mas
+</template>
+</category>
+
+<category>
+<pattern> ^ LISTO ^ PUESTO ^ </pattern>
+<template>
+  <srai> TE CONSIDERAS PREPARADO PARA DESEMPEÑAR LAS FUNCIONES DE ESTE PUESTO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ PREPARADO ^ PUESTO ^ </pattern>
+<template>
+  <srai> TE CONSIDERAS PREPARADO PARA DESEMPEÑAR LAS FUNCIONES DE ESTE PUESTO </srai>
+</template>
+</category>
+
+<!--P6-->
+<category>
+<pattern> TIENES EXPERIENCIA EN LA REALIZACION DE PROYECTOS EN EQUIPOS DE TRABAJO </pattern>
+<template>
+  Si, no es la primera vez que trabajo con un equipo, y cuando lo he hecho
+  los resultados han sido bastante satisfactorios
+</template>
+</category>
+
+<category>
+<pattern> ^ EXPERIENCIA (LABORAL) ^ TRABAJ+ EN EQUIPO+ </pattern>
+<template> <srai> TIENES EXPERIENCIA EN LA REALIZACION DE PROYECTOS EN EQUIPOS DE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ EXPERIENCIA (LABORAL) ^ TRABAJ+ EN EQUIPO+ </pattern>
+<template> <srai> TIENES EXPERIENCIA EN LA REALIZACION DE PROYECTOS EN EQUIPOS DE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ EXPERIENCIA ^ PROYECTO+ </pattern>
+<template> <srai> TIENES EXPERIENCIA EN LA REALIZACION DE PROYECTOS EN EQUIPOS DE TRABAJO </srai>
+</template>
+</category>
+
+<!--P7-->
+<category>
+<pattern> REALIZARIAS UN TRABAJO QUE NO FUERA CON TU ESPECIALIDAD </pattern>
+<template>
+  Claro, un trabajo que no pertenezca a mi campo es siempre una oportunidad
+  de mejorar
+</template>
+</category>
+
+<category>
+<pattern> HA+ ^ TRABAJO+ ^ NO ^ ESPECIALIDAD </pattern>
+<template>
+<srai>REALIZARIAS UN TRABAJO QUE NO FUERA CON TU ESPECIALIDAD</srai>
+</template>
+</category>
+
+<category>
+<pattern> REALIZA+ ^ TRABAJO+ ^ NO ^ CAMPO </pattern>
+<template>
+<srai>REALIZARIAS UN TRABAJO QUE NO FUERA CON TU ESPECIALIDAD</srai>
+</template>
+</category>
+
+<!--P8-->
+<category>
+<pattern> TE DESPLAZARIAS DE MANERA OCASIONAL A OTROS LUGARES </pattern>
+<template>
+  La movilidad dentro del entorno laboral me parece algo muy beneficioso para
+  permitir la conexion entre profesionales y eso suele ser una oportunidad que
+  no dejo escapar
+</template>
+</category>
+
+<category>
+<pattern>  </pattern>
+<template>
+<srai> TE DESPLAZARIAS DE MANERA OCASIONAL A OTROS LUGARES </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ VIAJAR+ ^ POR TRABAJO ^ </pattern>
+<template>
+<srai> TE DESPLAZARIAS DE MANERA OCASIONAL A OTROS LUGARES </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ DESPLAZAR+ ^ POR TRABAJO ^ </pattern>
+<template>
+<srai> TE DESPLAZARIAS DE MANERA OCASIONAL A OTROS LUGARES </srai>
+</template>
+</category>
+
+<!--P9-->
+<category>
+<pattern> TE CONSIDERAS UNA PERSONA CREATIVA </pattern>
+<template>
+  No soy la persona mas creativa pero con la experiencia acumulada me considero
+  capaz de superar un obstaculo
+</template>
+</category>
+
+<category>
+<pattern> ^ CONSIDERA+ ^ CREATIV+ </pattern>
+<template>
+<srai> TE CONSIDERAS UNA PERSONA CREATIVA </srai>
+</template>
+</category>
+
+<category>
+<pattern> ERES ^ CREATIV+ </pattern>
+<template>
+<srai> TE CONSIDERAS UNA PERSONA CREATIVA </srai>
+</template>
+</category>
+
+<category>
+<pattern> CREES ^ CREATIV+ </pattern>
+<template>
+<srai> TE CONSIDERAS UNA PERSONA CREATIVA </srai>
+</template>
+</category>
+
+<!--P10-->
+<category>
+<pattern> QUE EXPECTATIVAS TIENES DE ESTE TRABAJO </pattern>
+<template>
+  Este puesto tiene una gran proyeccion para mi a nivel profesional. Siempre me
+  ha apasionado mi campo de especialidad y creo que desempeñar este puesto es
+  la mejor manera para continuar aprendiendo y ser capaz de innovar y aportar
+  cosas nuevas a este campo.
+</template>
+</category>
+
+<category>
+<pattern> ^ EXPECTATIVA+ ^ TRABAJO+ ^ </pattern>
+<template>
+<srai> QUE EXPECTATIVAS TIENES DE ESTE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ ESPERA+ ^ TRABAJO+ ^ </pattern>
+<template>
+<srai> QUE EXPECTATIVAS TIENES DE ESTE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ PIENSA+ ^ TRABAJO+ ^ </pattern>
+<template>
+<srai> QUE EXPECTATIVAS TIENES DE ESTE TRABAJO </srai>
+</template>
+</category>
+
+<!--P11-->
+<category>
+<pattern> QUE TRABAJOS HAS TENIDO EN ESTA TEMATICA </pattern>
+<template>
+  Lo cierto es que soy bastante novato en este tema, pero tengo mucha ilusion
+  por trabajar y mejorar
+</template>
+</category>
+
+<category>
+<pattern> ^ TRABAJ+ ^ TEMA+ </pattern>
+<template>
+<srai> QUE TRABAJOS HAS TENIDO EN ESTA TEMATICA </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ TRABAJ+ ^ RELACIONAD+ </pattern>
+<template>
+<srai> QUE TRABAJOS HAS TENIDO EN ESTA TEMATICA </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ TAREA+ ^ RELACIONAD+ </pattern>
+<template>
+<srai> QUE TRABAJOS HAS TENIDO EN ESTA TEMATICA </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ TAREA+ ^ TEMA+ </pattern>
+<template>
+<srai> QUE TRABAJOS HAS TENIDO EN ESTA TEMATICA </srai>
+</template>
+</category>
+
+<!--P12-->
+<category>
+<pattern> NORMALMENTE TE LLEVAS EL TRABAJO A CASA </pattern>
+<template>
+  Considero que la vida personal y laboral deben estar separadas y no suelo
+  llevarme trabajo para poder asi desconectar y descansar y poder seguir
+  siendo productivo, pero, no me importaria quedarme en el trabajo hasta tarde
+  si asi consigo acabar todo lo pendiente
+</template>
+</category>
+
+<category>
+<pattern> ^ LLEVA+ ^ TRABAJO+ ^ A CASA ^ </pattern>
+<template>
+<srai> NORMALMENTE TE LLEVAS EL TRABAJO A CASA </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ TRABAJAR ^ TIEMPO LIBRE ^ </pattern>
+<template>
+<srai> NORMALMENTE TE LLEVAS EL TRABAJO A CASA </srai>
+</template>
+</category>
+
+<category>
+<pattern>  ^ TRABAJA+ ^ DESPUES ^ JORNADA+ LABORAL+ ^ </pattern>
+<template>
+<srai> NORMALMENTE TE LLEVAS EL TRABAJO A CASA </srai>
+</template>
+</category>
+
+<category>
+<pattern> TRABAJO ^ TIEMPO LIBRE ^ SEPARADO+ </pattern>
+<template>
+<srai> NORMALMENTE TE LLEVAS EL TRABAJO A CASA </srai>
+</template>
+</category>
+
+<category>
+<pattern> TIEMPO LIBRE ^ TRABAJO ^ SEPARADO+ </pattern>
+<template>
+<srai> NORMALMENTE TE LLEVAS EL TRABAJO A CASA </srai>
+</template>
+</category>
+
+<!--P13-->
+<category>
+<pattern> CUALES SON TUS ASPIRACIONES SALARIALES </pattern>
+<template>
+  Lo cierto es que esperaba ganar lo suficiente para poder dejar de preocuparme
+  de las cosas mas sencillas del dia a dia
+</template>
+</category>
+
+<category>
+<pattern> CUANTO ^ DINERO ^ </pattern>
+<template>
+<srai> CUALES SON TUS ASPIRACIONES SALARIALES </srai>
+</template>
+</category>
+
+<category>
+<pattern> QUE ^ SALARI+ ^ </pattern>
+<template>
+<srai> CUALES SON TUS ASPIRACIONES SALARIALES </srai>
+</template>
+</category>
+
+<category>
+<pattern> CUALES ^ SALARI+ ^ </pattern>
+<template>
+<srai> CUALES SON TUS ASPIRACIONES SALARIALES </srai>
+</template>
+</category>
+
+<!--P14-->
+<category>
+<pattern> DONDE TE VES DENTRO DE CINCO AÑOS </pattern>
+<template>
+  Me veo como un profesional formado que pertenece a una empresa a la vanguardia
+  de la innovacion
+</template>
+</category>
+
+<category>
+<pattern> ^ PROYECCION ^ LABORAL ^ </pattern>
+<template>
+<srai> DONDE TE VES DENTRO DE CINCO AÑOS </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ PROYECCION+ ^ FUTUR+ ^ </pattern>
+<template>
+<srai> DONDE TE VES DENTRO DE CINCO AÑOS </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ PLAN+ ^ FUTUR+ ^ </pattern>
+<template>
+<srai> DONDE TE VES DENTRO DE CINCO AÑOS </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ DONDE ^ FUTUR+ ^ </pattern>
+<template>
+<srai> DONDE TE VES DENTRO DE CINCO AÑOS </srai>
+</template>
+</category>
+
+<!--P15-->
+<category>
+<pattern> NO TIENES EXPERIENCIA PARA EL PUESTO A DESEMPEÑAR </pattern>
+<template>
+  Es cierto pero, si que tengo experiencia en trabajos personales tanto en grupo
+  como por separado y creo que el hecho de que sea un recien licenciado puede
+  aportar un soplo de aire fresco a la empresa.
+</template>
+</category>
+
+<category>
+<pattern> ^ FALTA ^ EXPERIENCIA (LABORAL) ^ </pattern>
+<template>
+<srai> NO TIENES EXPERIENCIA PARA EL PUESTO A DESEMPEÑAR </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ INEXPERIENCIA (LABORAL) ^ </pattern>
+<template>
+<srai> NO TIENES EXPERIENCIA PARA EL PUESTO A DESEMPEÑAR </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ POCA ^ EXPERIENCIA (LABORAL) ^ </pattern>
+<template>
+<srai> NO TIENES EXPERIENCIA PARA EL PUESTO A DESEMPEÑAR </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ ESTA+ ^ PREPARADO ^ PUESTO ^ </pattern>
+<template>
+<srai> NO TIENES EXPERIENCIA PARA EL PUESTO A DESEMPEÑAR </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ SIENTE+ ^ PREPARADO ^ PUESTO ^ </pattern>
+<template>
+<srai> NO TIENES EXPERIENCIA PARA EL PUESTO A DESEMPEÑAR </srai>
+</template>
+</category>
+
+<!--P16-->
+<category>
+<pattern> QUE SABES DE LA EMPRESA Y EL PUESTO DE TRABAJO </pattern>
+<template>
+  Que es una empresa que se encuentra a la cabeza de la innovacion y que este
+  puesto de trabajo esta hecho para mi
+</template>
+</category>
+
+<category>
+<pattern>  </pattern>
+<template>
+<srai> QUE SABES DE LA EMPRESA Y EL PUESTO DE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ CONOCE+ ^ EMPRESA </pattern>
+<template>
+<srai> QUE SABES DE LA EMPRESA Y EL PUESTO DE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ SABE+ ^ EMPRESA </pattern>
+<template>
+<srai> QUE SABES DE LA EMPRESA Y EL PUESTO DE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ CONOCE+ ^ PUESTO (DE TRABAJO) </pattern>
+<template>
+<srai> QUE SABES DE LA EMPRESA Y EL PUESTO DE TRABAJO </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ SABE+ ^ PUESTO (DE TRABAJO) </pattern>
+<template>
+<srai> QUE SABES DE LA EMPRESA Y EL PUESTO DE TRABAJO </srai>
+</template>
+</category>
+
+<!--P17-->
+<category>
+<pattern> QUE HACES CUANDO CONSIDERAS QUE TU JEFE NO TIENE LA RAZON </pattern>
+<template>
+  Creo que mi jefe es la persona que debe tener la ultima palabra, es cierto que
+  en alguna ocasion tengamos opiniones contrarias, pero su decision debe primar
+  por encima de todo y yo estare dispuesto a llevarla a su maximo exponente
+</template>
+</category>
+
+<category>
+<pattern> ^ JEFE ^ OPINION+ ^ DISTINTA ^ </pattern>
+<template>
+<srai> QUE HACES CUANDO CONSIDERAS QUE TU JEFE NO TIENE LA RAZON </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ JEFE ^ DISCREPA+ ^ </pattern>
+<template>
+<srai> QUE HACES CUANDO CONSIDERAS QUE TU JEFE NO TIENE LA RAZON </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ NO ^ ACUERDO ^ JEFE ^ </pattern>
+<template>
+<srai> QUE HACES CUANDO CONSIDERAS QUE TU JEFE NO TIENE LA RAZON </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ JEFE ^ EQUIVOCA+ </pattern>
+<template>
+<srai> QUE HACES CUANDO CONSIDERAS QUE TU JEFE NO TIENE LA RAZON </srai>
+</template>
+</category>
+
+<!--P18-->
+<category>
+<pattern> POR QUE DEBERIAMOS ESCOGERTE A TI </pattern>
+<template>
+  Estoy totalmente especializado en este campo y creo que tengo nuevos puntos
+  de vista que pueden ser de mucha utilidad para mejorar
+</template>
+</category>
+
+<category>
+<pattern> ^ ESCOGERTE ^ A TI ^ </pattern>
+<template>
+<srai> POR QUE DEBERIAMOS ESCOGERTE A TI </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ ELEGIRTE ^ A TI ^ </pattern>
+<template>
+<srai> POR QUE DEBERIAMOS ESCOGERTE A TI </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ SER ELEGIDO ^</pattern>
+<template>
+<srai> POR QUE DEBERIAMOS ESCOGERTE A TI </srai>
+</template>
+</category>
+
+<category>
+<pattern> ^ ADECUADO ^ (PUESTO) ^</pattern>
+<template>
+<srai> POR QUE DEBERIAMOS ESCOGERTE A TI </srai>
+</template>
+</category>
+
+</aiml>

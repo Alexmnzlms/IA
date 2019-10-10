@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!--Añadir serie -->
+<category>
+<pattern> ANADE (LA SERIE) * </pattern>
+<template>
+  <think>
+  <set name = "serie"><star/></set>
+  <set name = "topic">selecplataforma</set>
+  </think>
+  Dime la plataforma
+</template>
+</category>
+
+<topic name = "selecplataforma">
+<category>
+<pattern> * </pattern>
+<template>
+  <think>
+  <set name = "plataforma"><star/></set>
+  <set var = "valores"><readset>plataformas</readset></set>
+  <set var = "esta">
+    <srai> FINDITEM <get name = "plataforma"/> IN  <get var ="valores"/></srai>
+  </set>
+  </think>
+  <condition var ="esta">
+    <li value = "0">
+      Esa plataforma no esta disponible, pruebe otra vez.
+    </li>
+    <li>
+      <addtoset>
+        <name><get name = "plataforma"/></name>
+        <key><get name = "serie"/></key>
+      </addtoset>
+      Anadido <get name = "serie"/> a <get name = "plataforma"/>
+    </li>
+  </condition>
+</template>
+</category>
+</topic>
+
+<!-- Añadir capitulos -->
+<category>
+<pattern> ANADE UN CAPITULO A * </pattern>
+<template>
+  <think>
+  <set name = "serie"><star/></set>
+  <set name = "topic">dimecapitulo</set>
+  </think>
+  Dime el nombre del capitulo
+</template>
+</category>
+
+<topic name = "dimecapitulo">
+<category>
+<pattern> * </pattern>
+<template>
+  <think>
+    <set name = "capitulo"><star/></set>
+    <set name = "topic">dimetemporada</set>
+  </think>
+  Dime la temporada
+</template>
+</category>
+</topic>
+
+<topic name = "dimetemporada">
+<category>
+<pattern> * </pattern>
+<template>
+  <think>
+    <set name = "temporada"><star/></set>
+    <set name = "topic">dimeduracion</set>
+  </think>
+  Dime la duracion
+</template>
+</category>
+</topic>
+
+<topic name = "dimeduracion">
+<category>
+<pattern> * </pattern>
+<template>
+  <think>
+  <set name = "duracion"><star/></set>
+  <set var= "claves"><readkeys><get name = "serie"/></readkeys></set>
+  <set var= "numero">
+    <srai>COUNT <get var ="claves"/></srai>
+  </set>
+  <condition var = "numero">
+    <li value = "0">
+      <set var = "esta">0</set>
+    </li>
+    <li>
+    <set var = "esta">
+      <srai> FINDITEM <get name = "temporada"/> IN  <get var ="claves"/></srai>
+    </set>
+    </li>
+    </condition>
+  </think>
+  <condition var ="esta">
+    <li value = "0">
+      <addtomap>
+        <name><get name = "serie"/></name>
+        <key><srai> CODE <get name = "temporada"/></srai></key>
+        <value><srai> ADDITEMF <get name ="duracion"/> IN <srai>CODE <get name = "capitulo"/></srai></srai></value>
+      </addtomap>
+      Anadido a <get name = "serie"/> el capitulo <get name = "capitulo"/> de la <get name = "temporada"/> y de duracion <get name = "duracion"/>
+    </li>
+    <li>
+      <think>
+        <set var="aux"><map><name><get name = "serie"/></name><get name = "temporada"/></map></set>
+        <set var ="aux1">
+          <srai> ADDITEMF <get name = "capitulo"/> IN <get var = "aux"/> </srai>
+        </set>
+        <set var ="aux2">
+          <srai> ADDITEMF <get name = "duracion"/> IN <get var = "aux1"/> </srai>
+        </set>
+      </think>
+      <modifymap>
+        <name><get name = "serie"/></name>
+        <key><srai> CODE <get name = "temporada"/></srai></key>
+        <value><srai> CODE <get var = "aux2"/></srai></value>
+      </modifymap>
+      Anadido a <get name = "serie"/> el capitulo <get name = "capitulo"/> de la <get name = "temporada"/> y de duracion <get name = "duracion"/>
+    </li>
+  </condition>
+</template>
+</category>
+</topic>
+
+<category>
+  <pattern> ANADE EL CAPITULO * DE LA * EN LA SERIE * </pattern>
+  <template>
+    <think>
+      <set name = "capitulo"><star/></set>
+      <set name = "temporada"><star index = "2"/></set>
+      <set name = "serie"><star index = "3"/></set>
+      <set name = "topic">dimeduracion</set>
+    </think>
+    Dime la duracion
+  </template>
+</category>
+<!--/////////////////////////////////////////////////////////////////////////-->
+<!-- Regla que aniade una palabra al final de una frase si la palabra no estaba ya en la frase -->
+<category>
+  <pattern>
+      ADDITEMF * IN *
+  </pattern>
+  <template>
+    <think>
+      <set var="set">
+        <star index="2"/>
+      </set>
+    </think>
+    <think>
+      <set var="pos">
+        <srai>FINDITEM <star/> IN <get var="set"/></srai>
+      </set>
+    </think>
+    <condition var="pos">
+      <li value="0">
+        <think>
+          <set var="where"><srai>COUNT <get var="set"/></srai></set>
+          <condition var="where">
+            <li value="0"><set var="set"><star/></set></li>
+            <li><set var="set"><get var="set"/>@<star/></set></li>
+          </condition>
+        </think>
+      </li>
+    </condition>
+    <get var="set"/>
+  </template>
+</category>
+
+</aiml>

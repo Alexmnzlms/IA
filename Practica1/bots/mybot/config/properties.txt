@@ -1,0 +1,7 @@
+name: Bot
+email:alexmnzlms@correo.ugr.es
+gender:hombre
+botmaster:Alejandro Manzanares Lemus
+organization:ugr
+version:0.0.4
+empresa: Google

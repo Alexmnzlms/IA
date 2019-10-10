@@ -1,1 +1,1 @@
-# IA
+# Informatica Grafica
