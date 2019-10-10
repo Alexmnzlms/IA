@@ -1,1 +1,1 @@
-# Informatica Grafica
+# Inteligencia Artificial
